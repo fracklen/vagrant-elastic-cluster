@@ -23,6 +23,10 @@ discovery.zen.ping.multicast.enabled: false
 discovery.zen.ping.unicast.hosts: ['192.168.99.11','192.168.99.12','192.168.99.13','192.168.99.14','192.168.99.15']
 http.cors.enabled: true
 http.cors.allow-origin: /https?:\/\/.*/
+
+threadpool.bulk.type: fixed
+threadpool.bulk.size: 3
+threadpool.bulk.queue_size: 500
 EOF
 
 cat > /etc/default/elasticsearch <<EOF
